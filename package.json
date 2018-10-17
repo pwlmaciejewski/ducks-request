@@ -2,18 +2,21 @@
   "name": "ducks-request",
   "version": "0.0.1",
   "description": "Request reducer and actions creator",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:pwlmaciejewski/ducks-request.git",
   "author": "pwlmaciejewski@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "redux": "^4.0.1",
     "redux-hor": "^0.0.7",
     "typescript-fsa": "^3.0.0-beta-2"
   },
   "scripts": {
     "lint": "tslint --project .",
     "build": "tsc -p .",
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf lib"
   },
   "devDependencies": {
     "@types/jest": "^23.3.5",
@@ -27,7 +30,7 @@
   "jest": {
     "verbose": true,
     "transform": {
-      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".ts": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "moduleFileExtensions": [

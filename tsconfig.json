@@ -4,7 +4,6 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "jsx": "react",
     "allowJs": false,
     "allowSyntheticDefaultImports": false,
     "declaration": true,
