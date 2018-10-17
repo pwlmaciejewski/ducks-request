@@ -78,7 +78,7 @@ export default connect(
     barRequest: state.barRequest
   }),
   {
-    barRequest.started
+    barRequestStarted: barRequest.started
   }
 )
 ```
