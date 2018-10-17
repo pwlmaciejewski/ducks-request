@@ -43,10 +43,10 @@ export const barRequest = createRequest('bar', true)  // second argument `true` 
 import { fooRequest, barRequest } from './requests'
 import { combineReducers } from 'redux'
 
-export default combineReducers(
-  fooRequest,
-  barRequest
-)
+export default combineReducers({
+  fooRequest.reducer,
+  barRequest.reducer
+})
 ```
 
 #### 3. Use them in components
