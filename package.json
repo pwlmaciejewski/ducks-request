@@ -1,6 +1,6 @@
 {
   "name": "ducks-request",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Request reducer and actions creator",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
