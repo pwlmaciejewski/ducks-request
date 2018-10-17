@@ -20,7 +20,19 @@ yarn add ducks-request
 import createRequest from 'ducks-request'
 
 export const fooRequest = createRequest('foo')
-export const barRequest = createRequest('bar', true)  // second argument `tru` it will preserve the request result in the reducer
+export const barRequest = createRequest('bar', true)  // second argument `true` will preserve the request result in the reducer
+```
+
+`createRequest` returns a *ducks* module with action creators and reducer:
+
+```typescript
+{
+  started: ActionCreator<P>
+  done: ActionCreator<Success<R, S>>
+  failed: ActionCreator<Failure<R, E>>
+  reset: ActionCreator<P>
+  reducer: Reducer<Request<R, E>>
+}
 ```
 
 #### 2. Combine the reducers:
@@ -40,7 +52,7 @@ export combineReducers(
 #### 3. Use them in components
 
 ```typescript
-// component.js
+// component.jsx
 
 import * as React from 'react'
 import { connect } from 'react-redux'
@@ -65,6 +77,8 @@ export default connect(
   state => ({
     barRequest: state.barRequest
   }),
-  {}
+  {
+    barRequest.start
+  }
 )
 ```
