@@ -23,7 +23,7 @@ export const fooRequest = createRequest('foo')
 export const barRequest = createRequest('bar', true)  // second argument `true` will preserve the request result in the reducer
 ```
 
-`createRequest` returns a *ducks* module with action creators and reducer:
+`createRequest` returns a [ducks](https://github.com/erikras/ducks-modular-redux) module with action creators and reducer:
 
 ```typescript
 {
