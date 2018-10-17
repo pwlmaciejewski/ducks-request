@@ -43,7 +43,7 @@ export const barRequest = createRequest('bar', true)  // second argument `true` 
 import { fooRequest, barRequest } from './requests'
 import { combineReducers } from 'redux'
 
-export combineReducers(
+export default combineReducers(
   fooRequest,
   barRequest
 )
