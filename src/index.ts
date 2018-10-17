@@ -3,6 +3,8 @@ import createActions, { Actions } from './actions'
 import { Request } from './models'
 import createReducer from './reducer'
 
+export * from './models'
+
 export interface RequestModule<P, S, E> extends Actions<P, S, E> {
   reducer: Reducer<Request<S, E>>
 }
